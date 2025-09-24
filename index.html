@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="description" content="Portfolio of projects — built for conference showcases" />
-    <title>Your Name — Portfolio</title>
+    <meta name="description" content="Portfolio of aerospace and software projects — built for industry showcase" />
+    <title>Vincent Zino — Aerospace Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,8 +20,8 @@
     <header class="site-header" role="banner">
       <div class="container header-inner">
         <a class="brand" href="#hero" aria-label="Homepage">
-          <span class="brand-logo" aria-hidden="true">▣</span>
-          <span class="brand-text">Your Name</span>
+          <span class="brand-logo" aria-hidden="true">✈︎</span>
+          <span class="brand-text">Vincent Zino</span>
         </a>
 
         <nav class="nav" aria-label="Primary">
@@ -38,69 +38,129 @@
     </header>
 
     <main id="main">
+      <!-- Hero -->
       <section id="hero" class="section hero">
         <div class="container hero-inner">
           <div class="hero-content">
-            <h1>Hi, I'm <span class="accent">Your Name</span>.</h1>
-            <p class="lead">I build human-centered software. Here's a curated set of projects for the conference.</p>
+            <h1>Hi, I'm <span class="accent">Vincent Zino</span>.</h1>
+            <p class="lead">
+              Aerospace engineer specialising in <strong>flight simulation, aerodynamics, and ML applications for
+              structural health monitoring</strong>.  
+              This portfolio highlights my work presented at the aerospace conference.
+            </p>
             <div class="cta-group">
               <a class="btn primary" href="#projects">View Projects</a>
-              <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+              <a class="btn" href="assets/CV_VincentZino.pdf" target="_blank" rel="noopener">Resume</a>
             </div>
             <div class="socials" aria-label="Social links">
-              <a href="#" aria-label="GitHub" class="social">GitHub</a>
-              <a href="#" aria-label="LinkedIn" class="social">LinkedIn</a>
+              <a href="https://github.com/yourusername" aria-label="GitHub" class="social">GitHub</a>
+              <a href="https://linkedin.com/in/yourlinkedin" aria-label="LinkedIn" class="social">LinkedIn</a>
               <a href="mailto:you@example.com" aria-label="Email" class="social">Email</a>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- Projects -->
       <section id="projects" class="section">
         <div class="container">
           <div class="section-head">
             <h2>Projects</h2>
-            <p class="muted">Search and filter by technology or topic.</p>
+            <p class="muted">Selected work in aerospace, simulation, and applied AI.</p>
           </div>
 
-          <div class="controls">
-            <label class="visually-hidden" for="projectSearch">Search projects</label>
-            <input id="projectSearch" class="input" type="search" placeholder="Search projects... (e.g., React, ML, API)" autocomplete="off" />
-            <div id="tagFilters" class="tag-filters" role="toolbar" aria-label="Tag filters"></div>
-          </div>
+          <div id="projectsGrid" class="projects-grid" aria-live="polite">
+            <article class="project-card" data-tags="aerodynamics, AVL, MATLAB">
+              <h3>Finite Wing Aerodynamics Analysis</h3>
+              <p>
+                Automated AVL simulations to evaluate effects of aspect ratio, taper, sweep, dihedral, and winglets
+                on lift distribution, induced drag, and efficiency.  
+                Produced parametric studies with >40 configurations.
+              </p>
+            </article>
 
-          <div id="projectsGrid" class="projects-grid" aria-live="polite"></div>
+            <article class="project-card" data-tags="VLM, MATLAB, CFD">
+              <h3>Vortex Lattice Method Solver</h3>
+              <p>
+                Developed a MATLAB VLM solver with vortex ring elements to replicate classical results (Jacobs, 1947).
+                Implemented custom meshing functions and verified against AVL.
+              </p>
+            </article>
+
+            <article class="project-card" data-tags="Flight Simulation, MATLAB">
+              <h3>PC-9 Flight Simulator</h3>
+              <p>
+                Built a full nonlinear MATLAB flight simulator for the PC-9 trainer aircraft.
+                Simulated aerobatic manoeuvres and control responses with trim, propulsion, and aerodynamic models.
+              </p>
+            </article>
+
+            <article class="project-card" data-tags="UAV Design, Aerospace Design 3">
+              <h3>UCAV Design Project</h3>
+              <p>
+                Led aerodynamic and propulsion analysis for a long-endurance UAV with biplane wing configuration.
+                Work included performance modelling, stability analysis, and advanced technology assessment.
+              </p>
+            </article>
+
+            <article class="project-card" data-tags="Machine Learning, NDT, Fracture Mechanics">
+              <h3>ML for Crack Propagation in Composites</h3>
+              <p>
+                Developed a Python tool using CV + neural networks to automatically calculate crack growth rates from
+                DCB test video frames. Applied to graphene-enhanced fibre-reinforced composites.
+              </p>
+            </article>
+
+            <article class="project-card" data-tags="Robotics, Python, Computer Vision">
+              <h3>Tello Drone Precision Landing</h3>
+              <p>
+                Integrated ORB feature detection and a PID controller in Python + OpenCV for autonomous detection and
+                landing on mission pads with the Tello drone.
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
+      <!-- About -->
       <section id="about" class="section alt">
         <div class="container narrow">
           <div class="section-head">
             <h2>About</h2>
           </div>
           <p>
-            I am a software developer focused on creating reliable and delightful user experiences.
-            I enjoy building end‑to‑end: from accessible UIs to scalable APIs and data workflows.
+            I am an aerospace engineer (final-year, University of Sydney) with a strong foundation in
+            <strong>aerodynamics, flight dynamics, and composite structures</strong>.  
+            My thesis explores <strong>graphene-toughened composites</strong> and fracture mechanics, bridging materials research and NDT automation.
           </p>
           <p>
-            At the conference, I'm keen to discuss opportunities in web platforms, developer tools, and applied AI.
+            At this conference, I’m eager to discuss applications of <strong>AI in structural health monitoring, UAV design for
+            austere environments, and digital simulation tools</strong> that accelerate aerospace development.
           </p>
+          <ul>
+            <li><strong>Technical Skills:</strong> MATLAB, Python, OpenCV, TensorFlow, AVL, VLM, SolidWorks, composites testing</li>
+            <li><strong>Key Interests:</strong> Aerodynamics, UAV design, structural health monitoring, AI for aerospace</li>
+          </ul>
         </div>
       </section>
 
+      <!-- Contact -->
       <section id="contact" class="section">
         <div class="container narrow">
           <div class="section-head">
             <h2>Contact</h2>
           </div>
-          <p>Interested in a conversation? Reach me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+          <p>
+            Interested in a conversation or collaboration?  
+            Reach me at <a href="mailto:you@example.com">you@example.com</a> or connect via LinkedIn.
+          </p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-inner">
-        <small>© <span id="year"></span> Your Name. Built with HTML/CSS/JS.</small>
+        <small>© <span id="year"></span> Vincent Zino. Built for aerospace conference showcase.</small>
       </div>
     </footer>
 
