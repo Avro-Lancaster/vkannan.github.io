@@ -13,6 +13,59 @@
 
     <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      /* --- Project Cards Styling --- */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        background: var(--card-bg, #fff);
+        border-radius: 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        overflow: hidden;
+        outline: none;
+      }
+
+      .project-card:hover,
+      .project-card:focus {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      }
+
+      .project-summary h3 {
+        margin: 0 0 0.5rem;
+      }
+
+      .tag {
+        display: inline-block;
+        background: #0072ff;
+        color: #fff;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        margin-right: 0.3rem;
+      }
+
+      .project-details {
+        max-height: 0;
+        opacity: 0;
+        margin-top: 0;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      .project-card.active .project-details {
+        max-height: 500px;
+        opacity: 1;
+        margin-top: 1rem;
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -66,57 +119,101 @@
         <div class="container">
           <div class="section-head">
             <h2>Projects</h2>
-            <p class="muted">Selected work in aerospace, simulation, and applied AI.</p>
+            <p class="muted">Click a project to learn more.</p>
           </div>
 
-          <div id="projectsGrid" class="projects-grid" aria-live="polite">
-            <article class="project-card" data-tags="aerodynamics, AVL, MATLAB">
-              <h3>Finite Wing Aerodynamics Analysis</h3>
-              <p>
-                Automated AVL simulations to evaluate effects of aspect ratio, taper, sweep, dihedral, and winglets
-                on lift distribution, induced drag, and efficiency.  
-                Produced parametric studies with >40 configurations.
-              </p>
+          <div class="projects-grid">
+            <!-- Project Card -->
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>Finite Wing Aerodynamics Analysis</h3>
+                <p>AVL simulations for aerodynamic efficiency</p>
+                <span class="tag">MATLAB</span>
+                <span class="tag">AVL</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Automated AVL simulations to evaluate effects of aspect ratio, taper, sweep, dihedral,
+                  and winglets on lift distribution, induced drag, and efficiency.  
+                  Generated parametric studies across 40+ configurations with detailed CL-α and induced drag factor results.
+                </p>
+              </div>
             </article>
 
-            <article class="project-card" data-tags="VLM, MATLAB, CFD">
-              <h3>Vortex Lattice Method Solver</h3>
-              <p>
-                Developed a MATLAB VLM solver with vortex ring elements to replicate classical results (Jacobs, 1947).
-                Implemented custom meshing functions and verified against AVL.
-              </p>
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>Vortex Lattice Method Solver</h3>
+                <p>Custom VLM solver in MATLAB</p>
+                <span class="tag">VLM</span>
+                <span class="tag">CFD</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Developed a MATLAB VLM solver with vortex ring elements to replicate classical results
+                  (Jacobs, 1947). Implemented custom meshing functions and validated against AVL.
+                </p>
+              </div>
             </article>
 
-            <article class="project-card" data-tags="Flight Simulation, MATLAB">
-              <h3>PC-9 Flight Simulator</h3>
-              <p>
-                Built a full nonlinear MATLAB flight simulator for the PC-9 trainer aircraft.
-                Simulated aerobatic manoeuvres and control responses with trim, propulsion, and aerodynamic models.
-              </p>
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>PC-9 Flight Simulator</h3>
+                <p>Full nonlinear MATLAB flight model</p>
+                <span class="tag">Simulation</span>
+                <span class="tag">Flight Dynamics</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Built a complete MATLAB flight simulator for the PC-9 trainer aircraft,
+                  including trim solutions, propulsion, and aerobatic manoeuvres.  
+                  Focused on nonlinear dynamics and stability.
+                </p>
+              </div>
             </article>
 
-            <article class="project-card" data-tags="UAV Design, Aerospace Design 3">
-              <h3>UCAV Design Project</h3>
-              <p>
-                Led aerodynamic and propulsion analysis for a long-endurance UAV with biplane wing configuration.
-                Work included performance modelling, stability analysis, and advanced technology assessment.
-              </p>
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>UCAV Design Project</h3>
+                <p>High-altitude UAV with biplane wing</p>
+                <span class="tag">UAV Design</span>
+                <span class="tag">Systems</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Led aerodynamic and propulsion analysis for a long-endurance UAV with biplane wing configuration.
+                  Work included performance modelling, stability analysis, and advanced technology assessment.
+                </p>
+              </div>
             </article>
 
-            <article class="project-card" data-tags="Machine Learning, NDT, Fracture Mechanics">
-              <h3>ML for Crack Propagation in Composites</h3>
-              <p>
-                Developed a Python tool using CV + neural networks to automatically calculate crack growth rates from
-                DCB test video frames. Applied to graphene-enhanced fibre-reinforced composites.
-              </p>
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>ML for Crack Propagation</h3>
+                <p>Automated fracture toughness analysis</p>
+                <span class="tag">Python</span>
+                <span class="tag">ML</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Developed a Python tool using CV + neural networks to automatically calculate crack growth rates from
+                  DCB test video frames. Applied to graphene-enhanced fibre-reinforced composites.
+                </p>
+              </div>
             </article>
 
-            <article class="project-card" data-tags="Robotics, Python, Computer Vision">
-              <h3>Tello Drone Precision Landing</h3>
-              <p>
-                Integrated ORB feature detection and a PID controller in Python + OpenCV for autonomous detection and
-                landing on mission pads with the Tello drone.
-              </p>
+            <article class="project-card" tabindex="0">
+              <div class="project-summary">
+                <h3>Tello Drone Precision Landing</h3>
+                <p>Computer vision + PID control</p>
+                <span class="tag">Python</span>
+                <span class="tag">Robotics</span>
+              </div>
+              <div class="project-details">
+                <p>
+                  Integrated ORB feature detection and a PID controller in Python + OpenCV for autonomous detection and
+                  landing on mission pads with the Tello drone.
+                </p>
+              </div>
             </article>
           </div>
         </div>
@@ -164,6 +261,22 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+      // Expand/collapse projects
+      document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('active');
+        });
+        card.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.classList.toggle('active');
+          }
+        });
+      });
+
+      // Auto year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
