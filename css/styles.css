@@ -1,0 +1,50 @@
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--card-bg, #fff);
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  outline: none;
+}
+
+.project-card:hover,
+.project-card:focus {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.project-summary h3 {
+  margin: 0 0 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  background: #0072ff;
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.5rem;
+  margin-right: 0.3rem;
+}
+
+.project-details {
+  max-height: 0;
+  opacity: 0;
+  margin-top: 0;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.project-card.active .project-details {
+  max-height: 500px; /* enough to show details */
+  opacity: 1;
+  margin-top: 1rem;
+}
