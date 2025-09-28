@@ -95,7 +95,7 @@ img { max-width: 100%; display: block; }
 
 .tag-filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag { padding: 6px 10px; border-radius: 999px; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); background: var(--surface); color: var(--text); cursor: pointer; }
-.tag[aria-pressed="true"] { background: color-mix(in oklab, var(--accent) 30%, var(--surface)); border-color: var(--accent); color: color-mix(in oklab, white 85%, var(--text)); }
+.tag[aria-pressed="true"] { background: color-mix(in oklab, var(--accent) 30%, var(--surface)); border-color: var(--accent); color: color-mix(in oklab, blue 85%, var(--text)); }
 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .card { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid color-mix(in oklab, var(--text) 12%, transparent); box-shadow: var(--shadow); min-height: 180px; }
