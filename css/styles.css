@@ -1,18 +1,6 @@
 :root {
-  /* Dark theme (default) */
-  --bg: #0b0c0f;
-  --surface: #111318;
-  --text: #e7e9ee;
-  --muted: #9aa3b2;
-  --accent: #4f8cff;
-  --accent-contrast: #081631;
-  --ring: #4f8cff80;
-  --card: #1f2937; /* project card background */
-  --card-border: #374151;
-  --card-text: #f9fafb;
-  --tag-bg: #374151;
-  --tag-text: #d1d5db;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --card: #2563eb; /* Tailwind-style blue-600 */
+  --card-text: #ffffff; /* white text */
 }
 
 @media (prefers-color-scheme: light) {
@@ -164,8 +152,5 @@ img { max-width: 100%; display: block; }
 .theme-toggle { background: transparent; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); color: var(--text); padding: 8px 10px; border-radius: 10px; }
 .theme-toggle:hover { background: color-mix(in oklab, var(--text) 10%, transparent); }
 
-:root {
-  --card: #2563eb; /* Tailwind-style blue-600 */
-  --card-text: #ffffff; /* white text */
-}
+
 
