@@ -3,11 +3,11 @@
   --surface: #111318;
   --text: #e7e9ee;
   --muted: #9aa3b2;
-  --accent: #4f8cff;
-  --accent-contrast: #081631;
+  --accent: #4f8cff;  
+  --accent-contrast: #081631; 
   --ring: #4f8cff80;
   --card: #151821;
-  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow: 0 8px 24px rgba(0, 0, 0.5, 0.35);
 }
 
 @media (prefers-color-scheme: light) {
