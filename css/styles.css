@@ -132,7 +132,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 0.75rem;
 }
 
-/* Cards (generic grid) */
+/* Cards (generic grid) */ 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
 .card { display: flex; flex-direction: column; gap: 10px; padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--card-border); box-shadow: var(--shadow); min-height: 180px; }
 .card h3 { margin: 0; font-size: 18px; color: var(--card-text); }
@@ -154,7 +154,7 @@ img { max-width: 100%; display: block; }
   .nav-toggle { display: inline-block; }
   .nav-list { position: absolute; right: 4%; top: 62px; background: var(--surface); border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); border-radius: 12px; padding: 8px; display: none; flex-direction: column; gap: 8px; min-width: 180px; }
   .nav-list.open { display: flex; }
-}
+} 
 
 /* A11y helpers */
 .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
@@ -163,3 +163,9 @@ img { max-width: 100%; display: block; }
 
 .theme-toggle { background: transparent; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); color: var(--text); padding: 8px 10px; border-radius: 10px; }
 .theme-toggle:hover { background: color-mix(in oklab, var(--text) 10%, transparent); }
+
+:root {
+  --card: #2563eb; /* Tailwind-style blue-600 */
+  --card-text: #ffffff; /* white text */
+}
+
