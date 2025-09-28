@@ -127,3 +127,10 @@ img { max-width: 100%; display: block; }
 
 .theme-toggle { background: transparent; border: 1px solid color-mix(in oklab, var(--text) 15%, transparent); color: var(--text); padding: 8px 10px; border-radius: 10px; }
 .theme-toggle:hover { background: color-mix(in oklab, var(--text) 10%, transparent); }
+
+
+.project-card {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
